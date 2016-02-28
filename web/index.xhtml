@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Örnek Sayfa</title>
+        <link href="newcss.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <table bgcolor="aqua" width="1000px" align="center">
+            <tr>
+                <td width="%25">
+                    <img src="game-icon.jpg" height="250px" width="250px" style="border-radius:10px"></img>
+                </td>
+                <td width="%75" align="center">
+                    <h1 >Örnek JSF Uygulaması</h1>
+                    <h2>Hello JSF!!</h2>
+                </td>
+            </tr>
+            <tr>
+                <td width="%25" valign="top">
+                    <ul>
+                        <li>Menü 1</li>
+                        <li>Menü 2
+                            <ul>
+                                <li>Alt Menu 2-1</li>
+                                <li>Alt Menu 2-2</li>
+                            </ul>
+                        </li>
+                        <li>Menü 3</li>
+                    </ul>
+                </td>
+                <td width="%75">
+                    <table>
+                        <tr>
+                            <td width="%30" align="justify">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+                                </p>
+                                
+
+                            </td>
+                            <td width="%70" align="center">
+                                <h:form>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h:outputText value="Adınız:"></h:outputText>
+                                            </td>
+                                            <td>
+                                                <h:inputText value="#{Bean.name}"></h:inputText>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h:outputText value="Soyadınız:"></h:outputText>
+                                            </td>
+                                            <td>
+                                                <h:inputText value="#{Bean.lastname}"></h:inputText>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h:outputText value="Cinsiyetiniz:"></h:outputText>
+                                                
+                                            </td>
+                                            <td>
+                                                <h:selectOneRadio value="#{Bean.gender}">
+                                                    <f:selectItem itemLabel="Erkek" itemValue="male"></f:selectItem>
+                                                    <f:selectItem itemLabel="Kız" itemValue="female"></f:selectItem>
+                                                </h:selectOneRadio>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h:outputText value="Semtiniz"></h:outputText>                                                                                               
+                                            </td>
+                                            <td>
+                                                <h:selectOneMenu value="#{Bean.city}">
+                                                    <f:selectItem itemLabel="Ankara" itemValue="city1"></f:selectItem>
+                                                    <f:selectItem itemLabel="İstanbul" itemValue="city2"></f:selectItem>
+                                                    <f:selectItem itemLabel="İzmir" itemValue="city3"></f:selectItem>
+                                                </h:selectOneMenu>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <h:outputText value="Sevdiğiniz diller"></h:outputText>
+                                                
+                                            </td>
+                                            <td>
+                                                <h:selectManyCheckbox value="#{Bean.languages}">
+                                                    <f:selectItem itemLabel="C" itemValue="C"></f:selectItem>
+                                                    <f:selectItem itemLabel="JAVA" itemValue="JAVA"></f:selectItem>
+                                                    <f:selectItem itemLabel="C#" itemValue="C#"></f:selectItem>
+                                                </h:selectManyCheckbox>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <h:commandButton value="Onayla" action="#{Bean.onayla()}"/>
+                                </h:form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+
